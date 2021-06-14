@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerGfx
+public enum GfxType
 {
     High,
     Low,
@@ -10,13 +10,36 @@ public enum PlayerGfx
 
 public class PlayerGFXChange : MonoBehaviour
 {
-    [SerializeField] private PlayerGfx currentGfx;
+    [SerializeField] private GfxType currentGfx;
 
     [SerializeField] private SpriteRenderer highGfx;
     [SerializeField] private SpriteRenderer lowGfx;
 
-    private void Update()
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        highGfx.enabled = false;
+        if (collision.gameObject.layer == 6)
+        {
+            if (currentGfx != GfxType.High)
+            {
+                highGfx.enabled = true;
+                lowGfx.enabled = false;
+
+                currentGfx = GfxType.High;
+            }
+        }
+
+        if (collision.gameObject.layer == 7)
+        {
+            if (currentGfx != GfxType.Low)
+            {
+                highGfx.enabled = false;
+                lowGfx.enabled = true;
+
+                currentGfx = GfxType.Low;
+            }
+        }
     }
+
+    
 }
