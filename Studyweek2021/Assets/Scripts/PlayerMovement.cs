@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     {
         xInput = Input.GetAxisRaw("Horizontal");
 
+        GroundCheck();
+
         if (Input.GetKeyDown(KeyCode.Space) && JumpCounter > 0)
         {
             RB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Animations()
     {
-        anim.SetFloat("Speed", Mathf.Abs(xInput));
+        //anim.SetFloat("Speed", Mathf.Abs(xInput));
 
         if (xInput < 0 && isLookingRight)
         {
