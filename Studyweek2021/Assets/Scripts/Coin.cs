@@ -7,6 +7,8 @@ public class Coin : MonoBehaviour
     [Header("Stats")]
     [SerializeField] private float timeTillRespawn;
     [SerializeField] private float magnetizeSpeed;
+    [SerializeField] private float upDownSpeed;
+    private float currentUpDownSpeed;
 
     [Header("Refs")]
     [SerializeField] private GameObject gfx;
@@ -16,10 +18,11 @@ public class Coin : MonoBehaviour
 
     public bool magnetizeToPlayer;
 
-    private Vector3 playerPos = Vector3.zero;
+    private Vector3 addPos = new Vector3(0, 1, 0);
 
     private void Start()
     {
+        currentUpDownSpeed = upDownSpeed;
         circleCollider = GetComponent<Collider2D>();
         startPos = transform.position;
     }
@@ -28,7 +31,20 @@ public class Coin : MonoBehaviour
     {
         if (magnetizeToPlayer)
         {
-            transform.position = Vector3.Lerp(transform.position, playerPos, magnetizeSpeed * Time.deltaTime);
+            transform.position = Vector3.Lerp(transform.position, LevelManager.Instance.PlayerPosition, magnetizeSpeed * Time.deltaTime);
+        }
+        else
+        {
+            transform.position += Vector3.up * currentUpDownSpeed * Time.deltaTime;
+
+            if (transform.position.y >= startPos.y + .15f)
+            {
+                currentUpDownSpeed = upDownSpeed * -1f;
+            }
+            else if (transform.position.y <= startPos.y - .15f)
+            {
+                currentUpDownSpeed = upDownSpeed;
+            }
         }
     }
 
