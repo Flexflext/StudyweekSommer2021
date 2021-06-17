@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 
 public class PlayerMovement : MonoBehaviour
@@ -17,10 +18,18 @@ public class PlayerMovement : MonoBehaviour
     public Transform FeetTrans;
     Animator anim;
     private SpriteRenderer sprite;
+    public UnityEvent OnLandEvent;
+
 
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+
+        if(OnLandEvent == null)
+        {
+            OnLandEvent = new UnityEvent();
+        } 
+
         JumpCounter = MaxJumps;
 
         anim = GetComponent<Animator>();
@@ -38,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
             JumpCounter--;
 
             Animations();
+            anim.SetBool("IsJumping", true);
         }
     }
 
@@ -48,11 +58,16 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundCheck()
     {
-        Collider2D checkbox = Physics2D.OverlapBox(FeetTrans.position, CheckBox, 1, GroundLayer);
+        Collider2D checkBox = Physics2D.OverlapBox(FeetTrans.position, CheckBox, 1, GroundLayer);
         
-        if (checkbox)
+        if (checkBox)
         {
             JumpCounter = MaxJumps;
+        }
+
+        if (!checkBox)
+        {
+            OnLandEvent.Invoke();
         }
     }
 
@@ -78,4 +93,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnLanding()
+    {
+        anim.SetBool("IsLanding", false);
+    }
 }
