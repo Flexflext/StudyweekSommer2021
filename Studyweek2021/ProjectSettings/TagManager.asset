@@ -14,10 +14,10 @@ TagManager:
   - HighBackground
   - LowBackground
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Coin
+  - Upgrade
+  - Enemy
+  - Spawnpoint
   - 
   - 
   - 

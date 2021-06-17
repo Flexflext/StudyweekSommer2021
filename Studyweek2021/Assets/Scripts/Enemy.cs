@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Health")]
+    [SerializeField] private int health;
+    [SerializeField] private float respawnTime;
+    private int maxHealth;
+
+    [Header("Movement")]
     [SerializeField] private float speed;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private float checkRadius;
@@ -20,6 +26,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
+        maxHealth = health;
         startPos = transform.position;
         spRend = GetComponentInChildren<SpriteRenderer>();
         enemyCollider = GetComponent<Collider2D>();
@@ -72,14 +79,39 @@ public class Enemy : MonoBehaviour
         return wall;
     }
 
-    private IEnumerator RespawnCounter(float _time)
+    private IEnumerator DieAndRespawn(float _time)
     {
+        //Play Animator
+        // Wait time till Animation is Over
+        isDead = true;
+        enemyCollider.enabled = false;
+
+        yield return new WaitForSeconds(0.1f);
+
+        //Die
+        gfx.gameObject.SetActive(false);
+
         yield return new WaitForSeconds(_time);
 
         isDead = false;
+        health = maxHealth;
         transform.position = startPos;
         gfx.gameObject.SetActive(true);
         enemyCollider.enabled = true;
+    }
+
+    public void TakeDmg(int _dmg)
+    {
+        if (!isDead)
+        {
+            health -= _dmg;
+            //Dmg Animation
+
+            if (health != 0)
+            {
+                StartCoroutine(DieAndRespawn(respawnTime));
+            }
+        }
     }
 
     private void OnDrawGizmos()
