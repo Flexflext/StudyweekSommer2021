@@ -13,6 +13,11 @@ public class UpgradeManager : MonoBehaviour
 
     private List<UpgradeInfo> upgrades = new List<UpgradeInfo>();
 
+    private void Start()
+    {
+        playerMovement = GetComponent<PlayerMovement>();
+    }
+
     private void Update()
     {
         UpdateUpgrades();
@@ -50,6 +55,7 @@ public class UpgradeManager : MonoBehaviour
         {
             case TypeOfUpgrade.Doublejump:
                 info.Type = TypeOfUpgrade.Doublejump;
+                playerMovement.MaxJumps = 2;
                 break;
             case TypeOfUpgrade.Magnet:
                 info.Type = TypeOfUpgrade.Magnet;
@@ -84,6 +90,7 @@ public class UpgradeManager : MonoBehaviour
             switch (info.Type)
             {
                 case TypeOfUpgrade.Doublejump:
+                    playerMovement.MaxJumps = 1;
                     break;
                 case TypeOfUpgrade.Magnet:
                     imAMagnet = false;

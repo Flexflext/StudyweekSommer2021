@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public int MaxJumps;
     public int JumpCounter;
     private float xInput;
-    private bool isLookingRight = true;
+    public bool isLookingRight = true;
     public Rigidbody2D RB;
     public Vector2 CheckBox;
     public LayerMask GroundLayer;
