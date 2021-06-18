@@ -1,0 +1,600 @@
+fileFormatVersion: 2
+guid: be3ddb906dd632445b9de948fe4d0260
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4946914583798291469
+    second: Environment sheet nice Grafik uwu (1)_0
+  - first:
+      213: 1397027362683817774
+    second: Environment sheet nice Grafik uwu (1)_1
+  - first:
+      213: 1433486869275882069
+    second: Environment sheet nice Grafik uwu (1)_2
+  - first:
+      213: -6337552620564623952
+    second: Environment sheet nice Grafik uwu (1)_3
+  - first:
+      213: -2208698228457342390
+    second: Environment sheet nice Grafik uwu (1)_4
+  - first:
+      213: 4556001687951680918
+    second: Environment sheet nice Grafik uwu (1)_5
+  - first:
+      213: -6358393225150594605
+    second: Environment sheet nice Grafik uwu (1)_6
+  - first:
+      213: 7828606227463878280
+    second: Environment sheet nice Grafik uwu (1)_7
+  - first:
+      213: 7915768598621100653
+    second: Environment sheet nice Grafik uwu (1)_8
+  - first:
+      213: -7559352517066994025
+    second: Environment sheet nice Grafik uwu (1)_9
+  - first:
+      213: -2832801401909114536
+    second: Environment sheet nice Grafik uwu (1)_10
+  - first:
+      213: -5099379288433337611
+    second: Environment sheet nice Grafik uwu (1)_11
+  - first:
+      213: 6228786545193079433
+    second: Environment sheet nice Grafik uwu (1)_12
+  - first:
+      213: -5815150189392814337
+    second: Environment sheet nice Grafik uwu (1)_13
+  - first:
+      213: -8250426320868625138
+    second: Environment sheet nice Grafik uwu (1)_14
+  - first:
+      213: 2996685721344875029
+    second: Environment sheet nice Grafik uwu (1)_15
+  - first:
+      213: -1498241317321316653
+    second: Environment sheet nice Grafik uwu (1)_16
+  - first:
+      213: 4929616266879284485
+    second: Environment sheet nice Grafik uwu (1)_17
+  - first:
+      213: -180598762151089779
+    second: Environment sheet nice Grafik uwu (1)_18
+  - first:
+      213: -2781494530590381164
+    second: Environment sheet nice Grafik uwu (1)_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1024
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4097
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c1f75aa98f6a440800000000000000
+      internalID: 4946914583798291469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_1
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 4097
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2f054e0cfc336310800000000000000
+      internalID: 1397027362683817774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_2
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 4097
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 552306176b4c4e310800000000000000
+      internalID: 1433486869275882069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_3
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 4097
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd46e9287d7c08a0800000000000000
+      internalID: -6337552620564623952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3073
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4af3c4d9a02951e0800000000000000
+      internalID: -2208698228457342390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 3073
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695a07e756b2a3f30800000000000000
+      internalID: 4556001687951680918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 3073
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d106a8cc0372c7a0800000000000000
+      internalID: -6358393225150594605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_7
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 3073
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886356ad2ebc4ac60800000000000000
+      internalID: 7828606227463878280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2049
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6a9005d9957add60800000000000000
+      internalID: 7915768598621100653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_9
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 2049
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e4448dfe8c71790800000000000000
+      internalID: -7559352517066994025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_10
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2049
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8598aff322edfa8d0800000000000000
+      internalID: -2832801401909114536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_11
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 2049
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa52f90e8d5b39b0800000000000000
+      internalID: -5099379288433337611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1025
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98257ff7c58117650800000000000000
+      internalID: 6228786545193079433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_13
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1025
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe12b576bf6c4fa0800000000000000
+      internalID: -5815150189392814337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_14
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1025
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e05b71b49f8908d80800000000000000
+      internalID: -8250426320868625138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_15
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1025
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a1f3459cd569920800000000000000
+      internalID: 2996685721344875029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6ef3db57d253be0800000000000000
+      internalID: -1498241317321316653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_17
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505b35260e3896440800000000000000
+      internalID: 4929616266879284485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_18
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 1
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89eb17f1626e7df0800000000000000
+      internalID: -180598762151089779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Environment sheet nice Grafik uwu (1)_19
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49be77f16752669d0800000000000000
+      internalID: -2781494530590381164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 25f100142754e3c4fb0928d795a853fe
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
