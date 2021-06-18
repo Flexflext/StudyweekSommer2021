@@ -14,7 +14,6 @@ public class LevelMenu : MonoBehaviour
     [Header("Options")]
     [SerializeField] private GameObject optionsScreen;
     [SerializeField] private Slider volumeSlider;
-    [SerializeField] private Slider sensSlider;
 
     [Header("PauseMenu")]
     [SerializeField] private GameObject pauseMenu;
@@ -63,8 +62,6 @@ public class LevelMenu : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 ClosePause();
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
             }
         }
         else if (optionsScreen.activeSelf && !pauseMenu.activeSelf)
@@ -91,7 +88,6 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void OpenOptions()
     {
-        AudioManager.Instance.Play("ButtonClick");
         optionsScreen.SetActive(true);
         pauseMenu.SetActive(false);
     }
@@ -101,7 +97,6 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void CloseOptions()
     {
-        AudioManager.Instance.Play("ButtonClick");
         optionsScreen.SetActive(false);
         pauseMenu.SetActive(true);
     }
@@ -111,12 +106,8 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void OpenPause()
     {
-        AudioManager.Instance.Play("ButtonClick");
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     /// <summary>
@@ -124,12 +115,7 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void ClosePause()
     {
-        AudioManager.Instance.Play("ButtonClick");
         pauseMenu.SetActive(false);
-        Time.timeScale = 1;
-
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
     }
 
     /// <summary>
@@ -137,7 +123,6 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void ReturnMenu()
     {
-        AudioManager.Instance.Play("ButtonClick");
         //GUIManager.Instance.ChangeSceneWithAnimation(0);
     }
 
@@ -146,7 +131,6 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void Retry()
     {
-        AudioManager.Instance.Play("ButtonClick");
         //GUIManager.Instance.ChangeSceneWithAnimation(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -160,8 +144,5 @@ public class LevelMenu : MonoBehaviour
 
         endMenu.SetActive(true);
         Time.timeScale = 0;
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 }

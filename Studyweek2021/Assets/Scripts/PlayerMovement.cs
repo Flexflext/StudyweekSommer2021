@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
             JumpCounter--;
 
             Animations();
-            anim.SetBool("IsJumping", true);
+            //anim.SetBool("IsJumping", true);
         }
     }
 

@@ -8,6 +8,7 @@ public enum TypeOfUpgrade
 {
     Doublejump,
     Magnet,
+    Invincible,
 }
 
 public class Upgrade : MonoBehaviour

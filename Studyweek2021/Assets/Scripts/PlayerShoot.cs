@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private int Damage;
-    [SerializeField] private Transform bulletShopPos;
+    [SerializeField] private Transform bulletShotPos;
     [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private float bulletResetSpeed;
@@ -13,10 +13,14 @@ public class PlayerShoot : MonoBehaviour
 
     private bool canShootAgain = true;
     private PlayerMovement movement;
+    private Vector3 bulletStartPos;
+    private float bulletStartSpeed;
 
     private void Start()
     {
-        movement = GetComponent<PlayerMovement>(),
+        bulletStartSpeed = bulletSpeed;
+        bulletStartPos = bulletShotPos.position;
+        movement = GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -29,19 +33,23 @@ public class PlayerShoot : MonoBehaviour
             Shoot();
             StartCoroutine(C_ResetAttack());
         }
+
+        Animations();
     }
 
-    //private void Animations()
-    //{
-    //    if (movement.isLookingRight)
-    //    {
-
-    //    }
-    //    else if (!movement.isLookingRight)
-    //    {
-
-    //    }
-    //}
+    private void Animations()
+    {
+        if (movement.isLookingRight)
+        {
+            bulletShotPos.position = bulletShotPos.position;
+            bulletSpeed = bulletStartSpeed;
+        }
+        else if (!movement.isLookingRight)
+        {
+            bulletShotPos.position = new Vector3(bulletStartPos.x * -1f, bulletShotPos.position.y, bulletShotPos.position.z);
+            bulletSpeed = bulletStartSpeed * -1f;
+        }
+    }
 
 
 
@@ -54,7 +62,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletShopPos.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, bulletShotPos.position, Quaternion.identity);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
