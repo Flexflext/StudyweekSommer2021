@@ -17,8 +17,10 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask GroundLayer;
     public Transform FeetTrans;
     Animator anim;
-    private SpriteRenderer sprite;
+    private SpriteRenderer[] sprite;
     public UnityEvent OnLandEvent;
+
+    private bool isGrounded;
 
 
     void Start()
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
         JumpCounter = MaxJumps;
 
         anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        sprite = GetComponentsInChildren<SpriteRenderer>();
     }
     void Update()
     {
@@ -43,12 +45,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && JumpCounter > 0)
         {
-            RB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             JumpCounter--;
-
-            Animations();
+            Debug.Log(JumpCounter);
+            RB.velocity = new Vector2(RB.velocity.x, 0);
+            RB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             //anim.SetBool("IsJumping", true);
         }
+
+        Animations();
     }
 
     private void FixedUpdate()
@@ -58,17 +62,22 @@ public class PlayerMovement : MonoBehaviour
 
     void GroundCheck()
     {
-        Collider2D checkBox = Physics2D.OverlapBox(FeetTrans.position, CheckBox, 1, GroundLayer);
+        if (RB.velocity.y > 0)
+        {
+            return;
+        }
+
+        Collider2D checkBox = Physics2D.OverlapBox(FeetTrans.position, CheckBox, 0, GroundLayer);
         
         if (checkBox)
         {
             JumpCounter = MaxJumps;
         }
 
-        if (!checkBox)
-        {
-            OnLandEvent.Invoke();
-        }
+        //if (!checkBox)
+        //{
+        //    OnLandEvent.Invoke();
+        //}
     }
 
     private void OnDrawGizmos()
@@ -83,18 +92,20 @@ public class PlayerMovement : MonoBehaviour
 
         if (xInput < 0 && isLookingRight)
         {
-            sprite.flipX = true;
+            foreach (var item in sprite)
+            {
+                item.flipX = true;
+            }
+            
             isLookingRight = false;
         }
         else if(xInput > 0 && !isLookingRight)
         {
-            sprite.flipX = false;
+            foreach (var item in sprite)
+            {
+                item.flipX = false;
+            }
             isLookingRight = true;
         }
-    }
-
-    public void OnLanding()
-    {
-        anim.SetBool("IsLanding", false);
     }
 }

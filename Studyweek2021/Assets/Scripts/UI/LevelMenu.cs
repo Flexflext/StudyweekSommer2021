@@ -116,6 +116,7 @@ public class LevelMenu : MonoBehaviour
     public void ClosePause()
     {
         pauseMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     /// <summary>

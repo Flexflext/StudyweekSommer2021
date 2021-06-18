@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerShoot : MonoBehaviour
 {
     [SerializeField] private int Damage;
-    [SerializeField] private Transform bulletShotPos;
+    [SerializeField] private Transform bulletShotPosRight;
+    [SerializeField] private Transform bulletShotPosLeft;
     [SerializeField] private GameObject bulletPrefab;
 
     [SerializeField] private float bulletResetSpeed;
@@ -13,13 +14,12 @@ public class PlayerShoot : MonoBehaviour
 
     private bool canShootAgain = true;
     private PlayerMovement movement;
-    private Vector3 bulletStartPos;
+    private Transform bulletStartPos;
     private float bulletStartSpeed;
 
     private void Start()
     {
         bulletStartSpeed = bulletSpeed;
-        bulletStartPos = bulletShotPos.position;
         movement = GetComponent<PlayerMovement>();
     }
 
@@ -41,12 +41,12 @@ public class PlayerShoot : MonoBehaviour
     {
         if (movement.isLookingRight)
         {
-            bulletShotPos.position = bulletShotPos.position;
+            bulletStartPos = bulletShotPosRight;
             bulletSpeed = bulletStartSpeed;
         }
         else if (!movement.isLookingRight)
         {
-            bulletShotPos.position = new Vector3(bulletStartPos.x * -1f, bulletShotPos.position.y, bulletShotPos.position.z);
+            bulletStartPos = bulletShotPosLeft;
             bulletSpeed = bulletStartSpeed * -1f;
         }
     }
@@ -62,7 +62,7 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, bulletShotPos.position, Quaternion.identity);
+        GameObject bullet = Instantiate(bulletPrefab, bulletStartPos.position, Quaternion.identity);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
 
