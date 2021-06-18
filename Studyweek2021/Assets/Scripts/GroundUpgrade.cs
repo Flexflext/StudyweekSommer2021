@@ -13,6 +13,7 @@ public class GroundUpgrade : MonoBehaviour
 
     private void Start()
     {
+        startPos = transform.position;
         currentUpDownSpeed = upDownSpeed;
     }
 

@@ -11,7 +11,8 @@ public class Coin : MonoBehaviour
     private float currentUpDownSpeed;
 
     [Header("Refs")]
-    [SerializeField] private GameObject gfx;
+    [SerializeField] private GameObject gfxHigh;
+    [SerializeField] private GameObject gfxLow;
     private Collider2D circleCollider;
 
     private Vector3 startPos;
@@ -54,7 +55,8 @@ public class Coin : MonoBehaviour
         yield return new WaitForSeconds(_time);
 
         transform.position = startPos;
-        gfx.gameObject.SetActive(true);
+        gfxHigh.gameObject.SetActive(true);
+        gfxLow.gameObject.SetActive(true);
         circleCollider.enabled = true;
     }
 
@@ -63,7 +65,8 @@ public class Coin : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             magnetizeToPlayer = false;
-            gfx.gameObject.SetActive(false);
+            gfxHigh.gameObject.SetActive(false);
+            gfxLow.gameObject.SetActive(true);
             circleCollider.enabled = false;
             StartCoroutine(RespawnCounter(timeTillRespawn));
         }

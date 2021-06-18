@@ -15,11 +15,12 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float checkRadius;
 
     [Header("Refs")]
-    [SerializeField] private GameObject gfx;  
+    [SerializeField] private GameObject gfxHigh;  
+    [SerializeField] private GameObject gfxLow;  
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
     private Collider2D enemyCollider;
-    private SpriteRenderer spRend;
+    private SpriteRenderer[] spRend;
 
     private Vector3 startPos;
     private bool isDead;
@@ -28,7 +29,7 @@ public class Enemy : MonoBehaviour
     {
         maxHealth = health;
         startPos = transform.position;
-        spRend = GetComponentInChildren<SpriteRenderer>();
+        spRend = GetComponentsInChildren<SpriteRenderer>();
         enemyCollider = GetComponent<Collider2D>();
     }
 
@@ -56,7 +57,11 @@ public class Enemy : MonoBehaviour
 
         if (changeDir)
         {
-            spRend.flipX = !spRend.flipX;
+            foreach (var item in spRend)
+            {
+                item.flipX = !item.flipX;
+            }
+            
 
             groundCheck.localPosition = new Vector3(groundCheck.localPosition.x * -1f, groundCheck.localPosition.y, groundCheck.localPosition.z);
             wallCheck.localPosition = new Vector3(wallCheck.localPosition.x * -1f, wallCheck.localPosition.y, wallCheck.localPosition.z);
@@ -86,17 +91,19 @@ public class Enemy : MonoBehaviour
         isDead = true;
         enemyCollider.enabled = false;
 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
 
         //Die
-        gfx.gameObject.SetActive(false);
+        gfxHigh.gameObject.SetActive(false);
+        gfxLow.gameObject.SetActive(false);
 
         yield return new WaitForSeconds(_time);
 
         isDead = false;
         health = maxHealth;
         transform.position = startPos;
-        gfx.gameObject.SetActive(true);
+        gfxHigh.gameObject.SetActive(true);
+        gfxLow.gameObject.SetActive(true);
         enemyCollider.enabled = true;
     }
 
