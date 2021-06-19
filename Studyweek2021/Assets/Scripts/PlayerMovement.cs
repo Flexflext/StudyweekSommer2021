@@ -22,9 +22,12 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isGrounded;
 
+    private Animator[] animators;
+
 
     void Start()
     {
+        animators = GetComponentsInChildren<Animator>();
         RB = GetComponent<Rigidbody2D>();
 
         if(OnLandEvent == null)
@@ -41,12 +44,44 @@ public class PlayerMovement : MonoBehaviour
     {
         xInput = Input.GetAxisRaw("Horizontal");
 
+        if (Mathf.Abs(xInput) > 0)
+        {
+            foreach (var item in animators)
+            {
+                item.SetBool("isRunning", true);
+            }
+        }
+        else
+        {
+            foreach (var item in animators)
+            {
+                item.SetBool("isRunning", false);
+            }
+        }
+
+
         GroundCheck();
 
         if (Input.GetKeyDown(KeyCode.Space) && JumpCounter > 0)
         {
             JumpCounter--;
-            Debug.Log(JumpCounter);
+
+            if (MaxJumps > 1 && JumpCounter == 0)
+            {
+                foreach (var item in animators)
+                {
+                    item.Play("HDSuperJump");
+                    item.SetBool("isJumping", true);
+                }
+            }
+            else
+            {
+                foreach (var item in animators)
+                {
+                    item.SetBool("isJumping", true);
+                }
+            }
+            
             RB.velocity = new Vector2(RB.velocity.x, 0);
             RB.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
             //anim.SetBool("IsJumping", true);
@@ -72,6 +107,18 @@ public class PlayerMovement : MonoBehaviour
         if (checkBox)
         {
             JumpCounter = MaxJumps;
+
+            foreach (var item in animators)
+            {
+                item.SetBool("isJumping", false);
+            }
+        }
+        else
+        {
+            foreach (var item in animators)
+            {
+                item.SetBool("isJumping", true);
+            }
         }
 
         //if (!checkBox)
