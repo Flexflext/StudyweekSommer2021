@@ -108,4 +108,9 @@ public class PlayerMovement : MonoBehaviour
             isLookingRight = true;
         }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawCube(FeetTrans.position, CheckBox);
+    }
 }

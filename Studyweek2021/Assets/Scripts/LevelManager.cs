@@ -32,12 +32,18 @@ public class LevelManager : MonoBehaviour
     {
         time = TimeRemaining;
         PlayerHud.Instance.ChangeTimeNum(TimeRemaining);
+        PlayerHud.Instance.ChangeCoinNum(CurrentCoinAmount);
     }
 
     private void Update()
     {
         TimeRemaining = (int)ChangeLevelTime();
         PlayerHud.Instance.ChangeTimeNum(TimeRemaining);
+
+        if (TimeRemaining == 0)
+        {
+            LevelMenu.Instance.EndGame();
+        }
         //PlayerHud.Instance.ChangeCoinNum(CurrentCoinAmount);
     }
 

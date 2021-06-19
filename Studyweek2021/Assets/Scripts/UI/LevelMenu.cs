@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 using UnityEngine.UI;
 
 public class LevelMenu : MonoBehaviour
@@ -18,8 +20,9 @@ public class LevelMenu : MonoBehaviour
     [Header("PauseMenu")]
     [SerializeField] private GameObject pauseMenu;
 
-
+    [Header("EndMenu")]
     [SerializeField] private GameObject endMenu;
+    [SerializeField] private TMP_Text endCoinAmount;
 
     private void Awake()
     {
@@ -124,7 +127,7 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void ReturnMenu()
     {
-        //GUIManager.Instance.ChangeSceneWithAnimation(0);
+        GUIManager.Instance.LoadSceneByIndexWithAnimation(0);
     }
 
     /// <summary>
@@ -132,7 +135,7 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void Retry()
     {
-        //GUIManager.Instance.ChangeSceneWithAnimation(SceneManager.GetActiveScene().buildIndex);
+        GUIManager.Instance.LoadSceneByIndexWithAnimation(SceneManager.GetActiveScene().buildIndex);
     }
 
     /// <summary>
@@ -143,6 +146,8 @@ public class LevelMenu : MonoBehaviour
         pauseMenu.SetActive(false);
         optionsScreen.SetActive(false);
 
+
+        endCoinAmount.text = LevelManager.Instance.CurrentCoinAmount.ToString();
         endMenu.SetActive(true);
         Time.timeScale = 0;
     }

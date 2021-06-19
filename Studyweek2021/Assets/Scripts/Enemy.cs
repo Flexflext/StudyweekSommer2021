@@ -116,6 +116,7 @@ public class Enemy : MonoBehaviour
 
             if (health != 0)
             {
+                EnemyManager.Instance.SpawnRandomUpgrade(transform.position);
                 StartCoroutine(DieAndRespawn(respawnTime));
             }
         }

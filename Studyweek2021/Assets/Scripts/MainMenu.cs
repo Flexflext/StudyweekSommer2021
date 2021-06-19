@@ -80,7 +80,6 @@ public class MainMenu : MonoBehaviour
     /// </summary>
     public void QuitGame()
     {
-        //UIManager.Instance.QuitApplicationWithAnimation();
         Application.Quit();
     }
 
@@ -90,7 +89,7 @@ public class MainMenu : MonoBehaviour
     /// <param name="_idx"></param>
     public void ChangeScene(int _idx)
     {
-        //GUIManager.Instance.ChangeSceneWithAnimation(_idx);
+        GUIManager.Instance.LoadSceneByIndexWithAnimation(_idx);
         start = true;
     }
 }

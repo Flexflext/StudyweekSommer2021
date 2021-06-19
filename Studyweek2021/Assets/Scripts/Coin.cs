@@ -19,7 +19,7 @@ public class Coin : MonoBehaviour
 
     public bool magnetizeToPlayer;
 
-    private Vector3 addPos = new Vector3(0, 1, 0);
+    //private Vector3 addPos = new Vector3(0, 1, 0);
 
     private void Start()
     {
@@ -66,8 +66,12 @@ public class Coin : MonoBehaviour
         {
             magnetizeToPlayer = false;
             gfxHigh.gameObject.SetActive(false);
-            gfxLow.gameObject.SetActive(true);
+            gfxLow.gameObject.SetActive(false);
             circleCollider.enabled = false;
+
+            LevelManager.Instance.CurrentCoinAmount++;
+            PlayerHud.Instance.ChangeCoinNum(LevelManager.Instance.CurrentCoinAmount);
+
             StartCoroutine(RespawnCounter(timeTillRespawn));
         }
     }
