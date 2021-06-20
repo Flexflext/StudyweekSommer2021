@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 7f2615be3243f1e40b1756bd1f386f81
+guid: 32273f91de9c79047872687be04bd475
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8607921174571055707
-    second: Silber Robo Walk_0
+      213: -8548502080952489012
+    second: Bronze Robo Walk Sprite Sheet nice Grafik uwu_0
   - first:
-      213: -9008566099940772531
-    second: Silber Robo Walk_1
+      213: -5580941379874795629
+    second: Bronze Robo Walk Sprite Sheet nice Grafik uwu_1
   - first:
-      213: -3718033959632116727
-    second: Silber Robo Walk_2
+      213: -9046532843218818704
+    second: Bronze Robo Walk Sprite Sheet nice Grafik uwu_2
   - first:
-      213: 8928042007088341957
-    second: Silber Robo Walk_3
-  - first:
-      213: -5124181919935944704
-    second: Silber Robo Walk_4
+      213: -8753938140520458014
+    second: Bronze Robo Walk Sprite Sheet nice Grafik uwu_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -80,7 +77,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -92,7 +89,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
-    maxTextureSize: 16384
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -106,7 +103,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Silber Robo Walk_0
+      name: Bronze Robo Walk Sprite Sheet nice Grafik uwu_0
       rect:
         serializedVersion: 2
         x: 0
@@ -120,14 +117,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a501276c458a8880800000000000000
-      internalID: -8607921174571055707
+      spriteID: ccba32736ae9d5980800000000000000
+      internalID: -8548502080952489012
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silber Robo Walk_1
+      name: Bronze Robo Walk Sprite Sheet nice Grafik uwu_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -141,14 +138,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d45776d8cd42bf280800000000000000
-      internalID: -9008566099940772531
+      spriteID: 39fc84452638c82b0800000000000000
+      internalID: -5580941379874795629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silber Robo Walk_2
+      name: Bronze Robo Walk Sprite Sheet nice Grafik uwu_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -162,14 +159,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 904e94d00d3e66cc0800000000000000
-      internalID: -3718033959632116727
+      spriteID: 079a9074f42447280800000000000000
+      internalID: -9046532843218818704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Silber Robo Walk_3
+      name: Bronze Robo Walk Sprite Sheet nice Grafik uwu_3
       rect:
         serializedVersion: 2
         x: 3072
@@ -183,29 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c3244417e6c6eb70800000000000000
-      internalID: 8928042007088341957
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Silber Robo Walk_4
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 1024
-        height: 1536
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0082db161bf33e8b0800000000000000
-      internalID: -5124181919935944704
+      spriteID: 2e8d88c34a3c38680800000000000000
+      internalID: -8753938140520458014
       vertices: []
       indices: 
       edges: []

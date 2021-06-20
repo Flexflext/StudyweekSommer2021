@@ -127,6 +127,8 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void ReturnMenu()
     {
+        Debug.Log("Return");
+        //GUIManager.Instance.LoadSceneByIndexWithAnimation(0);
         GUIManager.Instance.LoadSceneByIndexWithAnimation(0);
     }
 
@@ -135,6 +137,8 @@ public class LevelMenu : MonoBehaviour
     /// </summary>
     public void Retry()
     {
+        Debug.Log("Retry");
+        //GUIManager.Instance.LoadSceneByIndexWithAnimation(SceneManager.GetActiveScene().buildIndex);
         GUIManager.Instance.LoadSceneByIndexWithAnimation(SceneManager.GetActiveScene().buildIndex);
     }
 

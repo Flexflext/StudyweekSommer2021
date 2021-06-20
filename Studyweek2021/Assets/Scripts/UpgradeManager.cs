@@ -9,6 +9,9 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField] private LayerMask coinLayer;
     [SerializeField] private int possibleJumps;
 
+    [SerializeField] private ParticleSystem invinicleVfx;
+    [SerializeField] private ParticleSystem magnetVfx;
+
     private PlayerMovement playerMovement;
 
     private List<UpgradeInfo> upgrades = new List<UpgradeInfo>();
@@ -60,6 +63,12 @@ public class UpgradeManager : MonoBehaviour
             case TypeOfUpgrade.Magnet:
                 info.Type = TypeOfUpgrade.Magnet;
                 imAMagnet = true;
+                magnetVfx.Play();
+                break;
+            case TypeOfUpgrade.Invincible:
+                info.Type = TypeOfUpgrade.Invincible;
+                Physics2D.IgnoreLayerCollision(3, 11, true);
+                invinicleVfx.Play();
                 break;
             default:
                 break;
@@ -94,6 +103,12 @@ public class UpgradeManager : MonoBehaviour
                     break;
                 case TypeOfUpgrade.Magnet:
                     imAMagnet = false;
+                    magnetVfx.Stop();
+                    break;
+                case TypeOfUpgrade.Invincible:
+                    info.Type = TypeOfUpgrade.Invincible;
+                    Physics2D.IgnoreLayerCollision(3, 11, false);
+                    invinicleVfx.Stop();
                     break;
                 default:
                     break;
@@ -112,5 +127,10 @@ public class UpgradeManager : MonoBehaviour
 
             Destroy(collision.gameObject);
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, magentRadius);
     }
 }

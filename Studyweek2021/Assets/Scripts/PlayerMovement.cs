@@ -20,7 +20,13 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer[] sprite;
     public UnityEvent OnLandEvent;
 
-    private bool isGrounded;
+    [SerializeField] private Transform rotaterObj;
+
+    [SerializeField] private ParticleSystem fallOnGroundVfx;
+    [SerializeField] private ParticleSystem jetPackVfx;
+
+
+    private bool wasGrounded;
 
     private Animator[] animators;
 
@@ -71,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
                 foreach (var item in animators)
                 {
                     item.Play("HDSuperJump");
+                    jetPackVfx.Play();
                     item.SetBool("isJumping", true);
                 }
             }
@@ -106,6 +113,14 @@ public class PlayerMovement : MonoBehaviour
         
         if (checkBox)
         {
+            if (!wasGrounded)
+            {
+                wasGrounded = true;
+                fallOnGroundVfx.Emit(30);
+
+                //Landing
+            }
+
             JumpCounter = MaxJumps;
 
             foreach (var item in animators)
@@ -115,6 +130,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
+            wasGrounded = false;
+
             foreach (var item in animators)
             {
                 item.SetBool("isJumping", true);
@@ -143,7 +160,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 item.flipX = true;
             }
-            
+
+
+            rotaterObj.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             isLookingRight = false;
         }
         else if(xInput > 0 && !isLookingRight)
@@ -152,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 item.flipX = false;
             }
+            rotaterObj.rotation = Quaternion.Euler(new Vector3(0, 0f, 0));
             isLookingRight = true;
         }
     }

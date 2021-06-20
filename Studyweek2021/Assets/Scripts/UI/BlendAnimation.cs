@@ -30,8 +30,9 @@ public class BlendAnimation : MonoBehaviour
     {
         animator.SetTrigger("LoadNewScene");
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
 
+        Time.timeScale = 1;
         SceneManager.LoadScene(_idx);
     }
 }

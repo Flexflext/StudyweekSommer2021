@@ -1,22 +1,19 @@
 fileFormatVersion: 2
-guid: 18a41111c3183a74c81bb89964728bd2
+guid: 64f4e17e3028fc44dbfe79323fee80bc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3113013524184824679
-    second: Bronze Robo Walk_0
+      213: 7149568136261718961
+    second: FIXED_Run Animation Char Sprite Sheet_HD_0
   - first:
-      213: -4945611830965167446
-    second: Bronze Robo Walk_1
+      213: 160375434690395612
+    second: FIXED_Run Animation Char Sprite Sheet_HD_1
   - first:
-      213: -871327569976345264
-    second: Bronze Robo Walk_2
+      213: -5133983852382681282
+    second: FIXED_Run Animation Char Sprite Sheet_HD_2
   - first:
-      213: -9037439064820555313
-    second: Bronze Robo Walk_3
-  - first:
-      213: 8629861742490903034
-    second: Bronze Robo Walk_4
+      213: 4425548779701398338
+    second: FIXED_Run Animation Char Sprite Sheet_HD_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bronze Robo Walk_0
+      name: FIXED_Run Animation Char Sprite Sheet_HD_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 1024
-        height: 1536
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -120,20 +117,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9940af571ba5cc4d0800000000000000
-      internalID: -3113013524184824679
+      spriteID: 1b3d453075e583360800000000000000
+      internalID: 7149568136261718961
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze Robo Walk_1
+      name: FIXED_Run Animation Char Sprite Sheet_HD_1
       rect:
         serializedVersion: 2
         x: 1024
         y: 0
         width: 1024
-        height: 1536
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,20 +138,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aaa1a522e38ad5bb0800000000000000
-      internalID: -4945611830965167446
+      spriteID: cdd7b6fab94c93200800000000000000
+      internalID: 160375434690395612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze Robo Walk_2
+      name: FIXED_Run Animation Char Sprite Sheet_HD_2
       rect:
         serializedVersion: 2
         x: 2048
         y: 0
         width: 1024
-        height: 1536
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,20 +159,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05d3e8c013c68e3f0800000000000000
-      internalID: -871327569976345264
+      spriteID: e37832423ec60c8b0800000000000000
+      internalID: -5133983852382681282
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bronze Robo Walk_3
+      name: FIXED_Run Animation Char Sprite Sheet_HD_3
       rect:
         serializedVersion: 2
         x: 3072
         y: 0
         width: 1024
-        height: 1536
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,29 +180,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc1e12e8d01949280800000000000000
-      internalID: -9037439064820555313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bronze Robo Walk_4
-      rect:
-        serializedVersion: 2
-        x: 4096
-        y: 0
-        width: 1024
-        height: 1536
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af167e5288d63c770800000000000000
-      internalID: 8629861742490903034
+      spriteID: 24be346ea25ba6d30800000000000000
+      internalID: 4425548779701398338
       vertices: []
       indices: 
       edges: []
@@ -213,7 +189,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 571afb9ab325a584abd3183252363051
     internalID: 0
     vertices: []
     indices: 

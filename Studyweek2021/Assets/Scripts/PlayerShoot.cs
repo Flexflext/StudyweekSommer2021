@@ -11,14 +11,20 @@ public class PlayerShoot : MonoBehaviour
 
     [SerializeField] private float bulletResetSpeed;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private Transform lightTransform;
+    [SerializeField] private Transform VfxTransform;
 
     private bool canShootAgain = true;
     private PlayerMovement movement;
     private Transform bulletStartPos;
     private float bulletStartSpeed;
 
+    private ParticleSystem vfx;
+
     private void Start()
     {
+        vfx = VfxTransform.gameObject.GetComponent<ParticleSystem>();
+        //lightTransform.position = bulletStartPos.position;
         bulletStartSpeed = bulletSpeed;
         movement = GetComponent<PlayerMovement>();
     }
@@ -42,11 +48,15 @@ public class PlayerShoot : MonoBehaviour
         if (movement.isLookingRight)
         {
             bulletStartPos = bulletShotPosRight;
+            lightTransform.position = bulletStartPos.position;
+            VfxTransform.position = bulletStartPos.position;
             bulletSpeed = bulletStartSpeed;
         }
         else if (!movement.isLookingRight)
         {
             bulletStartPos = bulletShotPosLeft;
+            lightTransform.position = bulletStartPos.position;
+            VfxTransform.position = bulletStartPos.position;
             bulletSpeed = bulletStartSpeed * -1f;
         }
     }
@@ -62,9 +72,14 @@ public class PlayerShoot : MonoBehaviour
 
     private void Shoot()
     {
+        vfx.Emit(30);
+
         GameObject bullet = Instantiate(bulletPrefab, bulletStartPos.position, Quaternion.identity);
 
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+
+        Bullet bulletBehavior = bullet.GetComponent<Bullet>();
+        bulletBehavior.Damage = Damage;
 
         rb.AddForce(new Vector2(bulletSpeed, 0));
     }

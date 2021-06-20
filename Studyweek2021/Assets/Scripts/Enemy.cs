@@ -114,9 +114,9 @@ public class Enemy : MonoBehaviour
             health -= _dmg;
             //Dmg Animation
 
-            if (health != 0)
+            if (health <= 0)
             {
-                EnemyManager.Instance.SpawnRandomUpgrade(transform.position);
+                EnemyManager.Instance.SpawnRandomUpgrade(transform.position + Vector3.up);
                 StartCoroutine(DieAndRespawn(respawnTime));
             }
         }
