@@ -44,12 +44,16 @@ public class UpgradeManager : MonoBehaviour
 
     private void CheckUpgrade(TypeOfUpgrade _type, float _time)
     {
-        UpgradeInfo info;
-        info = upgrades.Find(upgrade => upgrade.Type == _type);
+        UpgradeInfo info = new UpgradeInfo();
 
-        if (info == null)
+        //info = upgrades.Find(upgrade => upgrade.Type == _type);
+
+        foreach (var item in upgrades)
         {
-            info = new UpgradeInfo();
+            if (item.Type == _type)
+            {
+                info = item;
+            }
         }
 
         info.currentTime = _time;
@@ -74,8 +78,11 @@ public class UpgradeManager : MonoBehaviour
                 break;
         }
 
-        PlayerHud.Instance.OpenUpgrade(_type, _time);
+        PlayerHud.Instance.OpenUpgrade(_type, info.currentTime);
         upgrades.Add(info);
+
+
+        
     }
 
     private void UpdateUpgrades()

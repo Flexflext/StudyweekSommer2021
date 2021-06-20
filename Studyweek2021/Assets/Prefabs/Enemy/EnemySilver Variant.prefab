@@ -53,6 +53,10 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5953764436413866065, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
+      propertyPath: m_Size.x
+      value: 0.599585
+      objectReference: {fileID: 0}
     - target: {fileID: 5953764436413866068, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -109,6 +113,14 @@ PrefabInstance:
       propertyPath: speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5953764436413866071, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
+      propertyPath: health
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5953764436413866071, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
+      propertyPath: respawnVfx
+      value: 
+      objectReference: {fileID: 6519784762143225571, guid: a36f4c9f341317949886d4ca39156d57, type: 3}
     - target: {fileID: 5953764436855854605, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
       propertyPath: m_Name
       value: GFXHighSilver
@@ -135,7 +147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778924447696429662, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
       propertyPath: m_InstanceId
-      value: -230464
+      value: -201972
       objectReference: {fileID: 0}
     - target: {fileID: 8691486470647424952, guid: f5a2956ec9daf9d4f87bad722cb3136a, type: 3}
       propertyPath: m_Name

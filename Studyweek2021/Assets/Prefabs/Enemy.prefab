@@ -89,7 +89,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5953764436413866069}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.524, z: 0}
+  m_LocalPosition: {x: 3.96, y: -99.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5953764436855854607}
@@ -111,9 +111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbb6455fbdb4e7e4cbb29305dd81a8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
+  health: 1
   respawnTime: 10
-  speed: 4.75
+  speed: 1
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
@@ -122,6 +122,7 @@ MonoBehaviour:
   gfxLow: {fileID: 8691486470647424952}
   groundCheck: {fileID: 5953764435542436448}
   wallCheck: {fileID: 5953764435213135769}
+  respawnVfx: {fileID: 0}
 --- !u!61 &5953764436413866065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,7 +147,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 0.60578454, y: 1.5}
   m_EdgeRadius: 0
 --- !u!114 &2206977754971772887
 MonoBehaviour:
@@ -204,7 +205,7 @@ MonoBehaviour:
   - {x: -0.14490256, y: 0.57627267, z: 0}
   m_ShapePathHash: -1853804228
   m_Mesh: {fileID: 0}
-  m_InstanceId: -194806
+  m_InstanceId: 266898
 --- !u!50 &2689080296626709537
 Rigidbody2D:
   serializedVersion: 4
@@ -217,10 +218,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -303,10 +304,10 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.8828125, y: 1}
+  m_Size: {x: 1, y: 1.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &8023874846072125597
@@ -452,7 +453,7 @@ MonoBehaviour:
   - {x: -0.17784432, y: 0.10685277, z: 0}
   m_ShapePathHash: 978246702
   m_Mesh: {fileID: 0}
-  m_InstanceId: -182932
+  m_InstanceId: 266896
 --- !u!95 &6407279813291817838
 Animator:
   serializedVersion: 3

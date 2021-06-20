@@ -16,7 +16,9 @@ public class AudioManager : MonoBehaviour
 
     public Sound[] sounds;
 
-    //[Header("Arrays for Random Sounds")]
+    [Header("Arrays for Random Sounds")]
+    [SerializeField] private AudioClip[] footSteps;
+    [SerializeField] private AudioClip[] gun;
     
 
     private void Awake()
@@ -75,8 +77,11 @@ public class AudioManager : MonoBehaviour
         AudioClip clip = null;
 
         //Choses the Array with the Random Sound given by a String
-        
 
+        if (_audioClipArraySound == "Gun")
+        {
+            clip = gun[Random.Range(0, gun.Length)];
+        }
 
 
         // Replaces the audioClip in the Souce with the Random one that has been chosen
@@ -106,7 +111,11 @@ public class AudioManager : MonoBehaviour
         }
 
         // Change Clip To Random Clip
-        
+        if (_audioClipArraySound == "Footsteps")
+        {
+            clip = footSteps[Random.Range(0, footSteps.Length)];
+        }
+
 
         // Replaces the audioClip in the Souce with the Random one that has been chosen
         if (clip != null)

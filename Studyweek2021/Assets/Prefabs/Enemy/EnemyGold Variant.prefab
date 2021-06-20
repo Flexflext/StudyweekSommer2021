@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!95 &1004106728
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5549363289738548189}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4bca38ee9dd024d45846d22a5f7a644a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &9189167321035269297
 Animator:
   serializedVersion: 3
@@ -30,6 +11,25 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1ddee5a183c43e140a42cb3bec688ed8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &1004106728
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549363289738548189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4bca38ee9dd024d45846d22a5f7a644a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -59,7 +59,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1641124155197327193, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_InstanceId
-      value: -220992
+      value: -200418
       objectReference: {fileID: 0}
     - target: {fileID: 3381840703357281723, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_Sprite
@@ -73,6 +73,10 @@ PrefabInstance:
       propertyPath: health
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3427870567864780112, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
+      propertyPath: respawnVfx
+      value: 
+      objectReference: {fileID: 6519784762143225571, guid: a36f4c9f341317949886d4ca39156d57, type: 3}
     - target: {fileID: 3427870567864780114, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_Name
       value: EnemyGold Variant
@@ -121,6 +125,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3427870567864780118, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5933752
+      objectReference: {fileID: 0}
     - target: {fileID: 3427870568013116170, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_Name
       value: GFXHighGold
@@ -144,6 +152,10 @@ PrefabInstance:
     - target: {fileID: 3427870568013116171, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4099720962415047544, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 6369131535911239974, guid: 3d3e0ab07b589d346a76e932276a17ab, type: 3}
       propertyPath: m_Mass

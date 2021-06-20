@@ -36,7 +36,6 @@ public class MainMenuAnimations : MonoBehaviour
         if (maxRot != _pos)
         {
             maxRot = _pos;
-            //clockHead.transform.rotation = Quaternion.Euler(0, 0, maxRot);
             animator.Play("Select NewButtonAnimation", 0, 0);
         }
         

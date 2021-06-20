@@ -19,6 +19,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject gfxLow;  
     [SerializeField] private Transform groundCheck;
     [SerializeField] private Transform wallCheck;
+    [SerializeField] private GameObject respawnVfx;
     private Collider2D enemyCollider;
     private SpriteRenderer[] spRend;
 
@@ -97,11 +98,18 @@ public class Enemy : MonoBehaviour
         gfxHigh.gameObject.SetActive(false);
         gfxLow.gameObject.SetActive(false);
 
-        yield return new WaitForSeconds(_time);
+        yield return new WaitForSeconds(_time - 5f);
 
+        GameObject vfx = Instantiate(respawnVfx, startPos + Vector3.up, Quaternion.identity);
+        vfx.transform.position = startPos;
+
+        yield return new WaitForSeconds(5f);
+
+        Destroy(vfx);
+
+        transform.position = startPos;
         isDead = false;
         health = maxHealth;
-        transform.position = startPos;
         gfxHigh.gameObject.SetActive(true);
         gfxLow.gameObject.SetActive(true);
         enemyCollider.enabled = true;

@@ -99,7 +99,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5702117357904783610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.857, y: 8.675, z: 0}
+  m_LocalPosition: {x: 7.887, y: 9.028, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1210308311001294817}
@@ -126,7 +126,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!58 &5702117357904783608
 CircleCollider2D:
@@ -157,6 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 0
+  hiteffect: {fileID: 8462140007705935508, guid: 26ae704439f769a4f95eb7b82b45c4bf, type: 3}
 --- !u!1001 &5702117359442143844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +181,10 @@ PrefabInstance:
       propertyPath: m_Parameters.textureMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6911368987654507908, guid: d4584d8971b3ae049b699dc5378fd3f6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6fd0273e5ec64284fbd3f5db3d7e3a55, type: 2}
     - target: {fileID: 6911368987654507908, guid: d4584d8971b3ae049b699dc5378fd3f6, type: 3}
       propertyPath: m_Parameters.numCapVertices
       value: 0
